@@ -329,11 +329,42 @@ const MARCA = {
           <p>Respondo personalmente, sin bots</p>
         </div>
       </a>
+      <!-- Horarios -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="info-card" style="flex-direction:column;align-items:flex-start;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="info-icon">🏢</div>
+            <div>
+              <p style="color:#fff;font-weight:800;font-size:.9rem">Presencial</p>
+              <p style="color:rgba(255,255,255,.65);font-size:.78rem">Oficina</p>
+            </div>
+          </div>
+          <div style="padding-left:4px">
+            <p style="color:var(--amarillo);font-weight:800;font-size:1rem">9:00 – 14:00</p>
+            <p style="color:rgba(255,255,255,.65);font-size:.8rem;margin-top:2px">Lun – Vie</p>
+            <p style="color:rgba(255,255,255,.55);font-size:.75rem;margin-top:4px" id="infoDir2"></p>
+          </div>
+        </div>
+        <div class="info-card" style="flex-direction:column;align-items:flex-start;gap:8px;border-color:rgba(37,211,102,.3)">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="info-icon" style="background:#25d366">📲</div>
+            <div>
+              <p style="color:#fff;font-weight:800;font-size:.9rem">Virtual</p>
+              <p style="color:rgba(255,255,255,.65);font-size:.78rem">WhatsApp · Email</p>
+            </div>
+          </div>
+          <div style="padding-left:4px">
+            <p style="color:#25d366;font-weight:800;font-size:1rem">15:00 – 21:00</p>
+            <p style="color:rgba(255,255,255,.65);font-size:.8rem;margin-top:2px">Lun – Vie</p>
+            <p style="color:rgba(255,255,255,.55);font-size:.75rem;margin-top:4px">Respuesta garantizada</p>
+          </div>
+        </div>
+      </div>
       <div class="info-card">
         <div class="info-icon">📞</div>
         <div class="info-text">
           <p id="infoTel"></p>
-          <p>Lun–Vie de 9:00 a 19:00</p>
+          <p>Presencial 9–14h · Virtual 15–21h</p>
         </div>
       </div>
       <div class="info-card">
@@ -394,6 +425,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('infoEmail').textContent  = M.email;
   document.getElementById('infoDireccion').textContent = M.direccion;
   document.getElementById('infoCiudad').textContent    = M.ciudad;
+  document.getElementById('infoDir2').textContent      = M.direccion + ' · ' + M.ciudad;
   document.getElementById('footerNombre').textContent  = M.nombre;
   document.getElementById('footerNombre2').textContent = M.nombre;
   document.getElementById('footerHel').textContent     = M.asegura;
