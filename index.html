@@ -9,12 +9,12 @@
    CONFIGURACIÓN MARCA — cambiar aquí afecta todo
 ═══════════════════════════════════════════════ */
 :root {
-  --verde:       #2d7a3a;
-  --verde-dark:  #1a5226;
+  --verde:       #2E7D4A;
+  --verde-dark:  #1E5A3A;
   --verde-light: #e8f5e9;
-  --amarillo:    #f0c419;
-  --amarillo-d:  #c9a20e;
-  --rojo:        #c0392b;
+  --amarillo:    #F2B21A;
+  --amarillo-d:  #d49a10;
+  --rojo:        #D33C32;
   --negro:       #1a1a1a;
   --gris:        #f5f5f5;
   --gris-text:   #555;
@@ -161,14 +161,15 @@ footer p{color:#666;font-size:.85rem;line-height:1.7}
 <!-- ─── SCRIPT CONFIG (cambiar nombre aquí) ─── -->
 <script>
 const MARCA = {
-  nombre:    "SALAS & TÚ",
+  nombre:    "Cristina Salas Seguros Generales",
   agente:    "Cristina Salas",
   asegura:   "Helvetia Seguros",
   ciudad:    "Totana, Murcia",
   telefono:  "626 474 878",
   whatsapp:  "34626474878",
   email:     "cristisalas@gmail.com",
-  direccion: "Avda. de la Santa Nº 14"
+  direccion: "Avda. de la Santa Nº 14",
+  eslogan:   "Protegemos lo que más importa"
 };
 </script>
 
@@ -195,8 +196,9 @@ const MARCA = {
 <section class="hero" id="inicio">
   <div class="hero-content">
     <div class="hero-badge">🛡️ Agente exclusiva <span id="heroAsegura" style="margin-left:4px"></span></div>
-    <h1>Tu seguro,<br><span id="heroNombre"></span>.</h1>
-    <p>Protege lo que más importa con una persona de confianza. Asesoramiento personalizado, sin prisas y sin letra pequeña. Estoy aquí para ti en <span id="heroCiudad"></span>.</p>
+    <h1><span id="heroNombre"></span></h1>
+    <p style="font-size:1.2rem;font-weight:700;color:var(--amarillo);margin-bottom:10px" id="heroEslogan"></p>
+    <p>Asesoramiento personalizado, sin prisas y sin letra pequeña. Estoy aquí para ti en <span id="heroCiudad"></span>.</p>
     <div class="hero-btns">
       <a href="#contacto" class="btn-primary">🎯 Pedir presupuesto gratis</a>
       <a id="heroWa" href="#" class="btn-secondary">💬 Escríbeme por WhatsApp</a>
@@ -411,6 +413,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('navAgente').textContent  = `Agente ${M.asegura}`;
   document.getElementById('heroAsegura').textContent = M.asegura;
   document.getElementById('heroNombre').textContent  = M.nombre;
+  document.getElementById('heroEslogan').textContent = M.eslogan;
   document.getElementById('heroCiudad').textContent  = M.ciudad;
   document.getElementById('heroWa').href            = waLink;
   document.getElementById('sobreNombre').textContent = M.agente;
