@@ -28,16 +28,16 @@ html{scroll-behavior:smooth}
 body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--negro);background:var(--blanco)}
 
 /* ── NAV ─────────────────────────────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,82,38,.96);backdrop-filter:blur(8px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,82,38,.96);backdrop-filter:blur(8px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:104px}
 .nav-logo{display:flex;align-items:center;gap:14px}
 .nav-logo .badge{background:var(--amarillo);color:var(--negro);font-weight:900;font-size:1rem;padding:4px 10px;border-radius:6px;letter-spacing:.5px}
 .nav-logo .sub{color:rgba(255,255,255,.75);font-size:.78rem;letter-spacing:1px}
-.nav-icon{height:38px;width:auto;flex-shrink:0}
-.nav-divider{width:1px;height:32px;background:rgba(255,255,255,.25);flex-shrink:0}
+.nav-icon{height:88px;width:auto;flex-shrink:0}
+.nav-divider{width:1px;height:70px;background:rgba(255,255,255,.25);flex-shrink:0}
 .nav-partner{display:flex;align-items:center;gap:6px;flex-shrink:0}
 .nav-partner .nav-partner-label{color:rgba(255,255,255,.6);font-size:.62rem;letter-spacing:.5px;line-height:1.2;text-align:left}
-.nav-partner .nav-partner-badge{background:#fff;border-radius:6px;padding:4px 10px;display:flex;align-items:center}
-.nav-partner .nav-partner-badge img{height:18px;width:auto;display:block}
+.nav-partner .nav-partner-badge{background:#fff;border-radius:8px;padding:8px 14px;display:flex;align-items:center}
+.nav-partner .nav-partner-badge img{height:56px;width:auto;display:block}
 .nav-links{display:flex;gap:24px;list-style:none}
 .nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.9rem;transition:.2s}
 .nav-links a:hover{color:var(--amarillo)}
@@ -47,7 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,82,38,.96
 .nav-burger span{width:24px;height:2px;background:#fff;border-radius:2px}
 
 /* ── HERO ────────────────────────────────────── */
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--verde-dark) 0%,var(--verde) 60%,#3d9a4e 100%);display:flex;align-items:center;padding:80px 5% 40px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--verde-dark) 0%,var(--verde) 60%,#3d9a4e 100%);display:flex;align-items:center;padding:124px 5% 40px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:rgba(240,196,25,.08);border-radius:50%}
 .hero::after{content:'';position:absolute;left:-50px;bottom:-80px;width:400px;height:400px;background:rgba(255,255,255,.04);border-radius:50%}
 .hero-content{max-width:600px;position:relative;z-index:1}
@@ -157,7 +157,9 @@ footer p{color:#666;font-size:.85rem;line-height:1.7}
   .nav-logo{flex-wrap:wrap;row-gap:8px}
   .nav-divider{display:none}
   .nav-partner{flex-basis:100%;justify-content:flex-start;padding-top:6px;border-top:1px solid rgba(255,255,255,.15)}
-  .hero{flex-direction:column;text-align:center}
+  .nav-icon{height:56px}
+  .nav-partner .nav-partner-badge img{height:38px}
+  .hero{flex-direction:column;text-align:center;padding-top:170px}
   .hero-btns{justify-content:center}
   .hero-img{display:none}
   .sobre-inner,.contacto-inner{grid-template-columns:1fr}
